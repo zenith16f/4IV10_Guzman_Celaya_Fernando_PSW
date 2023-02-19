@@ -1,0 +1,45 @@
+* {
+  padding: 0;
+  margin: 0;
+  color: rgb(58, 40, 40);
+  text-align: center;
+}
+
+html,
+body {
+  background-color: rgb(223, 222, 213);
+}
+
+.main-container {
+  border: 4px solid rgb(106, 46, 53);
+  border-radius: 50px;
+  margin: 2rem;
+  padding: 2px;
+  background-color: #e1aa7d;
+}
+
+nav,
+section,
+footer,
+aside,
+article,
+header {
+  border: 2px solid rgb(46, 40, 54);
+  margin: 1rem;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+article,
+aside {
+  width: 40%;
+  display: inline-flex;
+  height: 300px;
+  padding: 1rem;
+}
+
+nav,
+footer,
+section {
+  background-color: #ffb563;
+}

@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(../Images/fondo.png);
+  color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userlogin {
+  background-color: #2b2929;
+  height: 550px;
+  width: 400px;
+  gap: 10px;
+  border-radius: 25px;
+  margin-top: 10%;
+  text-align-last: center;
+}
+
+.title {
+  margin-top: 30px;
+  text-align: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 14px;
+  padding-top: 10px;
+  margin-left: 2px;
+  margin-right: 2px;
+  color: rgb(255, 255, 255);
+}
+
+.userid {
+  padding-top: 30px;
+}
+
+.userid h2 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 18px;
+  text-align: center;
+  margin-right: 5px;
+  padding: 5px;
+}
+
+.userid input {
+  height: 27px;
+  width: 300px;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  background-color: #171717;
+  box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+}
+
+.userpassword {
+  padding-top: 30px;
+}
+
+.userpassword h2 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 18px;
+  text-align: center;
+  margin-right: 5px;
+  padding: 5px;
+}
+
+.userpassword input {
+  height: 27px;
+  width: 300px;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  background-color: #171717;
+  box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+}
+
+.buttons {
+  padding-top: 10px;
+  margin-top: 20px;
+  display: inline-flex;
+}
+
+.buttons button {
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  width: 55px;
+  background-color: #2b2929;
+  height: 55px;
+}
+
+#facebook {
+  margin-right: 30px;
+}
+
+#facebook img {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  padding-right: 5px;
+}
+
+#facebook p {
+  padding-right: 20px;
+}
+
+#google {
+  margin-left: 30px;
+}
+
+#google img {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.buttons p {
+  margin-top: 10px;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+a {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 17px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  margin-top: 25px;
+  float: left;
+  color: white;
+  text-decoration: none;
+  border: solid 1px white;
+  background-color: rgb(5, 5, 5);
+  border-radius: 10px;
+}
+
+#forgotten {
+  margin-left: 60px;
+  padding-left: 12px;
+}
+
+#create {
+  margin-left: 50px;
+  padding-left: 12px;
+}
+
+.userenter a {
+  width: 200px;
+  margin-left: 95px;
+  padding-top: 5px;
+  margin-right: 80px;
+}
+
+/* Les dejare una hermosa tarea en donde deberan realizar un registro donde se solicite nombre, ap paterno ap materno y contraseña y confirmar contraseña respetando las reglas de estilo del sitio  */
