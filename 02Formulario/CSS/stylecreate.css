@@ -105,7 +105,7 @@ body {
     "Lucida Sans", Arial, sans-serif;
 }
 
-a {
+.usercreate a {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   font-size: 17px;
@@ -133,4 +133,14 @@ a {
   margin-left: 30px;
   padding-top: 5px;
   margin-right: 60px;
+}
+
+.back-container,
+.back-container a,
+.back-container a:visited {
+  margin-top: 20px;
+  color: black;
+  background-image: url(../Images/fondo.png);
+  font-size: 20px;
+  text-decoration: none;
 }
