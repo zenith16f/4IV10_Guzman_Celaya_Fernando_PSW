@@ -48,6 +48,8 @@ body {
 }
 
 .userid input {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   height: 27px;
   width: 300px;
   border: none;
@@ -71,6 +73,8 @@ body {
 }
 
 .userpassword input {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   height: 27px;
   width: 300px;
   border: none;
@@ -162,5 +166,3 @@ a {
   padding-top: 5px;
   margin-right: 80px;
 }
-
-/* Les dejare una hermosa tarea en donde deberan realizar un registro donde se solicite nombre, ap paterno ap materno y contraseña y confirmar contraseña respetando las reglas de estilo del sitio  */
