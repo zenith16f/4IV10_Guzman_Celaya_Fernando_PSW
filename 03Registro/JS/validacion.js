@@ -44,7 +44,9 @@ function validar(formulario) {
   }
 
   var edad = parseInt(formulario.edad.value);
-  alert(edad);
+
+  //alert(edad);
+
   if (edad < 0 || edad >= 99) {
     alert("Ingresa una edad valida entre 01 y 99 años");
     formulario.edad.focus();
