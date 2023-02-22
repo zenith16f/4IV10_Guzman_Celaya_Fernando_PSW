@@ -12,6 +12,7 @@ CONST es un valor constante
 */
 
 function validar(formulario) {
+  //Validacion del nombre
   if (formulario.nombre.value.length <= 3) {
     alert("Favor de ingresar más de 3 caracteres en el campo nombre");
     formulario.nombre.focus();
@@ -43,6 +44,7 @@ function validar(formulario) {
     return false;
   }
 
+  //Validacion de la edad
   var edad = parseInt(formulario.edad.value);
 
   //alert(edad);
@@ -77,4 +79,30 @@ function validar(formulario) {
     formulario.edad.focus();
     return false;
   }
+
+  //*Validacion de la fecha de nacimiento
+  // let fechaIngresada = new Date(formulario.fecha.value.month).getMonth();
+  // alert(fechaIngresada);
+  let añoIngresado = parseInt(formulario.fecha.value);
+  // alert(añoIngresado);
+
+  let fechaActual = new Date();
+  let añoActual = fechaActual.getFullYear();
+
+  if (añoIngresado > añoActual) {
+    alert("No se puede ingresar un año mayor al actual");
+    return false;
+  }
+
+  //Validacion de correo
+  // //Obtener el campo de correo
+  // var email = formulario.correo.value;
+
+  // //Crear una expresion regular
+  // var prueba =
+  //   /([A-Za-z]+[0-9]+\.){10}\@([A-Za-z]+[0-9]){8}\.([A-Za-z]+[0-9]){3}/g;
+
+  // alert("Email " + (prueba.test(email) ? " " : "no" + "valido"));
+
+  // return prueba.test;
 }
