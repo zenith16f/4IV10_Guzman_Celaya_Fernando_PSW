@@ -112,9 +112,10 @@ function validar(formulario) {
   // let email = formulario.correo.value;
 
   //Crear una expresion regular
-  // let prueba = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-  // /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-  /([A-Za-z]+[0-9]+\.){10}\@([A-Za-z]+[0-9]){8}\.([A-Za-z]+[0-9]){3}/g;
+  let prueba =
+    // /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    // /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    /([A-Za-z]+[0-9]+\.){10}\@([A-Za-z]+[0-9]){8}\.([A-Za-z]+[0-9]){3}/g;
 
   alert("Email " + (prueba.test(email) ? " " : "no") + "valido");
 

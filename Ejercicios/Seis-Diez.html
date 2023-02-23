@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./CSS/styleSeis-Diez.css">
+    <script src="./JS/functionSeis-Diez.js"></script>
     <title>Seis-Diez</title>
   </head>
 
@@ -12,7 +14,15 @@
       <h3>Sexto Problema</h3>
       <p>Realizar un algoritmo que calcule la edad de la persona.</p>
       <br />
-      <div class="sixth-answer"></div>
+      <div class="sixth-answer">
+        <form name="input"  method = "get" onsubmit="return sixth(this)">
+          <label >Ingresa tu fecha de nacimiento</label>
+          <br>
+          <input type="date" name="nacimiento" id="fecha" max="2023-12-31">
+          <br>
+          <input type="submit" value="Enviar">
+        </form>
+      </div>
     </div>
     <br />
     <div class="seventh">
