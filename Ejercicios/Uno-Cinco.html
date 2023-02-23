@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./CSS/styleUno-Cinco.css">
+    <script src="./JS/functionUno-Cinco.js"></script>
     <title>Uno-Cinco</title>
   </head>
 
@@ -13,10 +15,22 @@
       <p>
         Suponga que un individuo desea invertir su capital en un banco y desea
         saber cuanto dinero ganara despues de un mes si el banco paga a razon de
-        8% mensual.
+        8% mensual siendo el maximo de meses de 36.
       </p>
       <br />
-      <div class="first-answer"></div>
+      <div class="first-answer" >
+        <form name="input" method = "get" onsubmit="return first(this)">
+        <label >Capital a invertir (mxn)</label>
+        <br>
+        <input type="number" name="capital" id="money" min="0" step="0.1" >
+        <br>
+        <label >Duracion de la inversion (Maximo 36 meses)</label>
+        <br>
+        <input type="number" name="tiempo" id="time" max="36" min="1">
+        <br>
+        <input type="submit" value="Calcular">
+        </form>
+      </div>
     </div>
     <br />
     <div class="second">
@@ -65,6 +79,11 @@
       </p>
       <br />
       <div class="fifth-answer"></div>
+    </div>
+    <div class="back container">
+      <a href="../index.html">Main Page</a>
+      <br>
+      <a href="../Ejercicios/mainEjercicios.html">Exercises Page</a>
     </div>
   </body>
 </html>
