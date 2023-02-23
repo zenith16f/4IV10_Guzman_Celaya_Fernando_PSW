@@ -10,24 +10,29 @@
   </head>
 
   <body>
+    <div class="textoInicial">
     <p>
-      Habia una vez un patito que decia miau miau y este patito queria aprender
-      a utilizar diferentes tipos de formulario<br />
-      Existen dos metodos principales para la obtencion de los datos de un
-      formulario web, para lo cual aqui lo explicaremos
-    </p>
-    <p>
+      Habia una vez un patito que decia miau miau y este patito queria aprender a utilizar diferentes tipos de formulario
       <br />
+      Existen dos metodos principales para la obtencion de los datos de un formulario web, para lo cual aqui lo explicaremos
+    </p>
+      <br />
+      <p>
       <h1>GET:</h1>
       Este metodo es el estandar como salida del navegador mediante el cual se
       resuelve una peticion por parte del cliente, asi mismo en la salida
       estantar(url), se puede visualizar los datos enviados mediante el
       formulario.
-      <br>
-      <h1>POST: </h1>Este metodo es el mas utilizado para el envio de informacion
-       desde un formulario actuando para poder agregar o insertar nuevos datos en
-        una BD, asi mismo a diferencia del metodo get, este utiliza "un tipo de seguridad", mediante el cual la informacion no es visible por medio de la salida estandar del navegadot
     </p>
+      <br>
+    <p>
+      <h1>POST: </h1>
+      Este metodo es el mas utilizado para el envio de informacion
+      desde un formulario actuando para poder agregar o insertar nuevos datos en
+      una BD, asi mismo a diferencia del metodo get, este utiliza "un tipo de seguridad", mediante el cual la informacion no es visible por medio de la salida estandar del navegador
+    </p>
+    </p>
+  </div>
     <br>
     <div class="container">
       <div class="content-formulario">
@@ -42,18 +47,26 @@
           <br>
           <label>Fecha de nacimiento:</label>
           <br>
-          <input type="date" name="fecha" id="miento" max="2023-12-31">
+          <input type="date" name="fecha" id="fecha" max="2023-12-31">
           <br>
           <label >Email:</label>
-          <input type="emai" name="correo" id="corre">
           <br>
-          <input type="submit" name="enviar"
+          <input type="emai" name="correo" id="correo">
+          <br>
+          <label >Rango:</label>
+          <br>
+          <input type="range" name="rango" id="rango" min="0" max="100" step="1" value="50">
+          <br>
+          <input type="submit" name="enviar"id="enviar"
           value="Enviar datos del regisro">
           <br>
-          <input type="reset" name="borrar" value="Borrar datos">
+          <input type="reset" name="borrar" id="eliminar" value="Borrar datos">
         </form>
       </div>
-      <div class="tarea">Validar el campo de fecha para que no existan años superiores al actual ni años con el 31 de febrero</div>
+      <div class="back-container">
+        <a href="../index.html">Main page</a>
+      </div>
+      <!-- <div class="tarea">Validar el campo de fecha para que no existan años superiores al actual ni años con el 31 de febrero</div> -->
     </div>
     <!-- <script src="./JS/validacion.js"></script> -->
   </body>

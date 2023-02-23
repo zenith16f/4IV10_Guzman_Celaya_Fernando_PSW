@@ -81,28 +81,42 @@ function validar(formulario) {
   }
 
   //*Validacion de la fecha de nacimiento
-  // let fechaIngresada = new Date(formulario.fecha.value.month).getMonth();
-  // alert(fechaIngresada);
-  let añoIngresado = parseInt(formulario.fecha.value);
-  // alert(añoIngresado);
+  let ingreso = document.getElementById("fecha").value;
+  let fechaIngresada = new Date(ingreso);
+
+  if (!!fechaIngresada.valueOf()) {
+    año = parseInt(fechaIngresada.getFullYear());
+    mes = parseInt(fechaIngresada.getMonth());
+    dia = parseInt(fechaIngresada.getDate());
+  }
 
   let fechaActual = new Date();
   let añoActual = fechaActual.getFullYear();
 
-  if (añoIngresado > añoActual) {
-    alert("No se puede ingresar un año mayor al actual");
+  let fechaFebrero = new Date("2023-02-28");
+  let mesFebrero = fechaFebrero.getMonth();
+  let diaFebrero = fechaFebrero.getDate();
+
+  if (mes == mesFebrero && dia > diaFebrero) {
+    alert("Febrero no tiene mas de 28 dias");
+    return false;
+  }
+
+  if (año > añoActual || año < "1940") {
+    alert("No se puede ingresar ese año ");
     return false;
   }
 
   //Validacion de correo
-  // //Obtener el campo de correo
-  // var email = formulario.correo.value;
+  //Obtener el campo de correo
+  // let email = formulario.correo.value;
 
-  // //Crear una expresion regular
-  // var prueba =
-  //   /([A-Za-z]+[0-9]+\.){10}\@([A-Za-z]+[0-9]){8}\.([A-Za-z]+[0-9]){3}/g;
+  //Crear una expresion regular
+  // let prueba = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  // /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  /([A-Za-z]+[0-9]+\.){10}\@([A-Za-z]+[0-9]){8}\.([A-Za-z]+[0-9]){3}/g;
 
-  // alert("Email " + (prueba.test(email) ? " " : "no" + "valido"));
+  alert("Email " + (prueba.test(email) ? " " : "no") + "valido");
 
-  // return prueba.test;
+  return prueba.test();
 }
