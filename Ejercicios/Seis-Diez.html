@@ -29,12 +29,24 @@
     <div class="seventh">
       <h3>Septimo Problema</h3>
       <p>
-        Suponga que un individuo desea invertir su capital en un banco y desea
-        saber cuanto dinero ganara despues de un mes si el banco paga a razon de
-        8% mensual.
+        Leer 2 numeros; si son iguales que los multiplique, si el primero es mayor que el segundo que haga una potencia si el segundo es mayor que el primero que los divida
       </p>
       <br />
-      <div class="seventh-answer"></div>
+      <div class="seventh-answer">
+        <form name="input"  method = "get" >
+          <label >Primer número</label>
+          <br>
+          <input type="text"  id="numeroUno" onkeypress="return seventhI(event)">
+          <br>
+          <label >Segundo número</label>
+          <br>
+          <input type="text" id="numeroDos" onkeypress="return seventhI(event)">
+          <br>
+          <br>
+          <input type="button" value="Realizar operacion" onclick="return seventh()">
+          <input type="button" value="Borrar" onclick="return seventhV()">
+        </form>
+      </div>
     </div>
     <br />
     <div class="eigth">
@@ -124,17 +136,18 @@
       </p>
       <br />
       <div class="tenth-answer">
-        <form  method="get" onsubmit="return tenth(this)">
+        <form  method="get" onkeypress="return tenthI(event)">
         <label >Ingresa tu salario</label>
         <br>
-        <input type="text" name="salario" id="payment">
+        <input type="text" name="salario" id="lastment">
         <br>
         <label >Ingresa los años que haz trabajado</label>
         <br>
         <input type="text" name="años" id="years">
         <br>
         <br>
-        <input type="text" value="Calcular utilidad">
+        <input type="button" value="Calcular utilidad" onclick="return tenth()">
+        <input type="button" value="Borrar datos" onclick="return tenthV()">
         </form>
         <br>
       </div>
