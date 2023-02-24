@@ -55,7 +55,41 @@ function vaciar() {
 }
 
 // Second answer
-function second() {}
+function secondF() {
+  let salarioV = document.getElementById("pagoV").value;
+  let lector = /\D/;
+
+  if (lector.test(salarioV)) {
+    alert("Ingresa un salario valido");
+    return false;
+  } else {
+    salarioV = parseFloat(salarioV);
+    if (salarioV > 0 && salarioV < 999999) {
+      let pagoV = salarioV * 5;
+      let extra = 0.1 * pagoV;
+      let salarioF = pagoV + extra;
+      let impuestos = 0.12 * salarioF;
+      alert(impuestos);
+      let total = salarioF - impuestos;
+      alert("Tu cobro mensual es de: $" + total);
+    } else {
+      alert("Ingresa un salario valido");
+      return false;
+    }
+  }
+}
+
+function secondI(e) {
+  let teclado = document.all ? e.keyCode : e.which;
+  if (teclado == 8) return true;
+  let patron = /[0-9\d .]/;
+  let codigo = String.fromCharCode(teclado);
+  return patron.test(codigo);
+}
+
+function secondV() {
+  document.getElementById("pagoV").value = "";
+}
 
 // Third answer
 function third() {}
