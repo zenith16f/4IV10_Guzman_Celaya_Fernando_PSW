@@ -49,13 +49,61 @@ function eighth() {
     return false;
   } else {
     mayor = Math.max(numberOne, numberTwo, numberThree);
-    console.log(mayor);
+    alert("El numero mayor es: " + mayor);
   }
   //   console.log(numberOne + "" + numberTwo + "" + numberThree);
 }
 
 // Ninth answer
-function ninth() {}
+function ninth() {
+  let salario = document.getElementById("payment").value;
+  let horasTrabajadas = document.getElementById("hours").value;
+  let horasSobrantes;
+  let horasDoble;
+  let horasTriple;
+  let pago;
+  let pagoExtra;
+  let pagoDoble;
+  let pagoTriple;
+  let pagoTotal;
+  let lector = /\D/;
+
+  if (
+    lector.test(salario) ||
+    lector.test(horasTrabajadas) ||
+    salario == 0 ||
+    horasTrabajadas == 0
+  ) {
+    alert("Ingresa datos validos");
+    return false;
+  } else {
+    if (horasTrabajadas > 40) {
+      pagoExtra = true;
+    } else {
+      pagoExtra = false;
+    }
+
+    if (pagoExtra == true) {
+      horasSobrantes = horasTrabajadas - 40;
+      if (horasSobrantes > 8) {
+        horasTriple = horasSobrantes - 8;
+        horasDoble = horasSobrantes - horasTriple;
+        pagoDoble = horasDoble * (salario * 2);
+        pagoTriple = horasTriple * (salario * 3);
+        pago = 40 * salario;
+        pagoTotal = pago + pagoDoble + pagoTriple;
+      } else {
+        horasDoble = horasSobrantes;
+        pagoDoble = horasDoble * (salario * 2);
+        pago = 40 * salario;
+        pagoTotal = pago + pagoDoble;
+      }
+    } else {
+      pagoTotal = horasTrabajadas * salario;
+    }
+    alert(pagoTotal);
+  }
+}
 
 // Tenth answer
 function tenth() {}

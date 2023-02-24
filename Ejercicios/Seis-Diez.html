@@ -66,22 +66,35 @@
     <div class="ninth">
       <h3>Noveno Problema</h3>
       <p>
-        Detenninar la cantidad de dinero que recibirá un trabajador por concepto
+        Determinar la cantidad de dinero que recibirá un trabajador por concepto
         de las horas extras trabajadas en una empresa, sabiendo que cuando las
         horas de trabajo exceden de 40, el resto se consideran horas extras y
-        que estas se pagan a1 doble de una hora normal cuando no exceden de 8;
-        si las horas extras exceden de 8 se pagan las primeras 8 a1 doble de 10
-        que se pagan las horas normales y el resto al tnple.
+        que estas se pagan al doble de una hora normal cuando no exceden de 8;
+        si las horas extras exceden de 8 se pagan las primeras 8 al doble de lo
+        que se pagan las horas normales y el resto al triple.
       </p>
       <br />
-      <div class="ninth-answer"></div>
+      <div class="ninth-answer">
+        <form name="input" onsubmit="return ninth(this)">
+        <label >Ingresa tu salario por hora</label>
+        <br>
+        <input type="text" name="salario" id="payment">
+        <br>
+        <label >Ingresa las horas que trabajaste</label>
+        <br>
+        <input type="text" name="horas" id="hours">
+        <br>
+        <br>
+        <input type="submit" value="Calcular pago">
+        </form>
+      </div>
     </div>
     <br />
     <div class="tenth">
       <h3>Decimo Problema</h3>
       <p>
         Calcular la utilidad que un trabajador recibe en el reparto anual de
-        utilidades si este se le asigna como un porcentaje de su salano mensual
+        utilidades si este se le asigna como un porcentaje de su salario mensual
         que depende de su antigüedad en la empresa de acuerdo con la siguiente
         tabla:
         <table>
@@ -110,7 +123,21 @@
         </table>
       </p>
       <br />
-      <div class="tenth-answer"></div>
+      <div class="tenth-answer">
+        <form  method="get" onsubmit="return tenth(this)">
+        <label >Ingresa tu salario</label>
+        <br>
+        <input type="text" name="salario" id="payment">
+        <br>
+        <label >Ingresa los años que haz trabajado</label>
+        <br>
+        <input type="text" name="años" id="years">
+        <br>
+        <br>
+        <input type="text" value="Calcular utilidad">
+        </form>
+        <br>
+      </div>
     </div>
     <div class="back-container">
       <a href="../index.html">Main Page</a>
