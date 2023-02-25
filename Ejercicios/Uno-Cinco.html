@@ -4,8 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./CSS/styleUno-Cinco.css">
-    
+    <link rel="stylesheet" href="./CSS/styleUno-Cinco.css">    
     <title>Uno-Cinco</title>
   </head>
 
@@ -63,15 +62,15 @@
         <form method="get" name="Store">
           <label >Ingresa el nombre del producto</label>
           <br>
-          <input type="text" id='producto' onkeypress="">
+          <input type="text" id='producto' onkeypress="return inputLetras()">
           <br>
           <label >Ingresa la marca del producto</label>
           <br>
-          <input type="text" id='marca' onkeypress="">
+          <input type="text" id='marca' onkeypress="return inputLetras()">
           <br>
           <label >Ingresa el tipo del producto</label>
           <br>
-          <input type="text" id='tipoProducto' onkeypress="">
+          <input type="text" id='tipoProducto' onkeypress="return inputLetras()">
           <br>
           <label >Ingresa el precio del producto</label>
           <br>
@@ -91,12 +90,38 @@
         Algoritmos. Dicha calificación se compone de los siguientes porcentajes:
         <ul>
         <li>55% del promedio de sus tres calificaciones parciales.</li>
-        <li>30% de lacalificación del examen final. </li>
+        <li>30% de la calificación del examen final. </li>
         <li>15% de la calificación de un trabajo final</li>
     </ul>
       </p>
       <br />
-      <div class="fourth-answer"></div>
+      <div class="fourth-answer">
+        <form  method="get" name="calificacion">
+          <label >Ingresa la calificacion de tu primer parcial</label>
+          <br>
+          <input type="text" id='parcial1' onkeypress="return inputNumeros(event)">
+          <br>
+          <label >Ingresa la calificacion de tu segundo parcial</label>
+          <br>
+          <input type="text" id='parcial2' onkeypress="return inputNumeros(event)">
+          <br>
+          <label >Ingresa la calificacion de tu tercer parcial</label>
+          <br>
+          <input type="text" id='parcial3' onkeypress="return inputNumeros(event)">
+          <br>
+          <label >Ingresa la calificacion de tu examen final</label>
+          <br>
+          <input type="text" id='examenFinal' onkeypress="return inputNumeros(event)">
+          <br>
+          <label >Ingresa la calificacion de tu trabajo final</label>
+          <br>
+          <input type="text" id='trabajoFinal' onkeypress="return inputNumeros(event)">
+          <br>
+          <br>
+          <input type="button" value="Calcular promedio" onclick="return fourthF()">
+          <input type="button" value="Borrar datos" onclick="return fourthV()">
+        </form>
+      </div>
     </div>
     <br />
     <div class="fifth">
@@ -105,7 +130,21 @@
         Un maestro desea saber el porcentaje de hombres y porcentaje de mujeres de un grupo de estudiantes, dicho grupo solamente puede tener elementos de hombres con un porcentaje, elementos de mujeres con un porcentaje a partir de ahi obtener el 100%
       </p>
       <br />
-      <div class="fifth-answer"></div>
+      <div class="fifth-answer">
+        <form method="get" name="porcentajes">
+          <label >Ingresa el numero de hombres</label>
+          <br>
+          <input type="text" id='hombres' onkeypress="return inputNumeros(event)">
+          <br>
+          <label >Ingresa el numero de mujeres</label>
+          <br>
+          <input type="text" id='mujeres' onkeypress="return inputNumeros(event)">
+          <br>
+          <br>
+          <input type="button" value="Calcular porcentajes" onclick="return fifthF()">
+          <input type="button" value="Borrar datos" onclick="return fifthV()">
+        </form>
+      </div>
     </div>
     <div class="back container">
       <a href="../index.html">Main Page</a>

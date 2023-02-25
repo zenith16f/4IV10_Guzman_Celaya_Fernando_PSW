@@ -5,8 +5,9 @@
 
 body {
   margin: 40px;
-  background-color: #dde1e4;
+  background-color: #c6c8ca;
   color: #12100e;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 .container {
@@ -14,8 +15,23 @@ body {
   line-height: 1.5;
 }
 
+.container h2 {
+  font-size: 40px;
+  color: #240b36;
+}
+
+.container p {
+  font-size: 20px;
+}
+
+.container h3 {
+  font-size: 20px;
+  color: #240b36;
+}
+
 a,
 a:visited {
   color: #240b36;
-  font-size: 16px;
+  line-height: 1.7;
+  font-size: 19px;
 }
