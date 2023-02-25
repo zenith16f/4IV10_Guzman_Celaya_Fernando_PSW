@@ -22,13 +22,13 @@
         <form name="input" method = "get" >
         <label >Capital a invertir (mxn)</label>
         <br>
-        <input type="text" id="money" onkeypress="return firstI(event)">
+        <input type="text" id="inversion" onkeypress="return inputNumeros(event)">
         <br>
         <label >Duracion de la inversion (Maximo 36 meses)</label>
         <br>
-        <input type="text" id="time"  onkeypress="return firstI(event)">  
+        <input type="text" id="meses"  onkeypress="return inputNumeros(event)">  
         <br>
-        <input type="button" value="Calcular" onclick="return firstF()">
+        <input type="button" value="Calcular" onclick="return funcionUno()">
         <input type="button" value="Borrar datos" onclick="return vaciar()">
         </form>
       </div>
@@ -44,7 +44,7 @@
         <form name="input" method = "get" >
         <label >Sueldo base (por venta realizada)</label>
         <br>
-        <input type="text" id="pagoV" onkeypress="return secondI(event)">
+        <input type="text" id="pagoV" onkeypress="return inputNumeros(event)">
         <br>
         <br>
         <input type="button" value="Calcular" onclick="return secondF()">
@@ -71,11 +71,11 @@
           <br>
           <label >Ingresa el tipo del producto</label>
           <br>
-          <input type="text" id='tipoProducto' onkeypress="return thirdIt(event)">
+          <input type="text" id='tipoProducto' onkeypress="">
           <br>
           <label >Ingresa el precio del producto</label>
           <br>
-          <input type="text" id='precioProducto' onkeypress="return thirdIp(event)">
+          <input type="text" id='precioProducto' onkeypress="return inputNumeros(event)">
           <br>
           <br>
           <input type="button" value="Calcular" onclick="return thirdF()">

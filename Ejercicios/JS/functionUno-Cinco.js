@@ -1,8 +1,8 @@
 // First answer
-function firstF() {
+function funcionUno() {
   //Varaibles
-  let capitalIngresado = document.getElementById("money").value;
-  let tiempoIngresado = document.getElementById("time").value;
+  let capitalIngresado = document.getElementById("inversion").value;
+  let tiempoIngresado = document.getElementById("meses").value;
   let ganancia;
   let totalCambiante;
   let totalFinal;
@@ -41,17 +41,9 @@ function firstF() {
   }
 }
 
-function firstI(e) {
-  let teclado = document.all ? e.keyCode : e.which;
-  if (teclado == 8) return true;
-  let patron = /[0-9\d .]/;
-  let codigo = String.fromCharCode(teclado);
-  return patron.test(codigo);
-}
-
 function vaciar() {
-  document.getElementById("money").value = "";
-  document.getElementById("time").value = "";
+  document.getElementById("inversion").value = "";
+  document.getElementById("meses").value = "";
 }
 
 // Second answer
@@ -69,7 +61,6 @@ function secondF() {
       let extra = 0.1 * pagoV;
       let salarioF = pagoV + extra;
       let impuestos = 0.12 * salarioF;
-      alert(impuestos);
       let total = salarioF - impuestos;
       alert("Tu cobro mensual es de: $" + total);
     } else {
@@ -79,36 +70,12 @@ function secondF() {
   }
 }
 
-function secondI(e) {
-  let teclado = document.all ? e.keyCode : e.which;
-  if (teclado == 8) return true;
-  let patron = /[0-9\d .]/;
-  let codigo = String.fromCharCode(teclado);
-  return patron.test(codigo);
-}
-
 function secondV() {
   document.getElementById("pagoV").value = "";
 }
 
 // Third answer
 function thirdF() {}
-
-function thirdIp(e) {
-  let teclado = document.all ? e.keyCode : e.which;
-  if (teclado == 8) return true;
-  let patron = /[0-9\d .]/;
-  let codigo = String.fromCharCode(teclado);
-  return patron.test(codigo);
-}
-
-function thirdIt(e) {
-  let teclado = document.all ? e.keyCode : e.which;
-  if (teclado == 8) return true;
-  let patron = /[Aa-Zz\W .]/;
-  let codigo = String.fromCharCode(teclado);
-  return patron.test(codigo);
-}
 
 function thirdV() {
   document.getElementById("producto").value = "";
@@ -122,3 +89,15 @@ function fourth() {}
 
 // Fifth answer
 function fifth() {}
+
+//Validacion de teclado
+
+function inputNumeros(e) {
+  let teclado = document.all ? e.keyCode : e.which;
+  if (teclado == 8) return true;
+  let patron = /[0-9\d .]/;
+  let codigo = String.fromCharCode(teclado);
+  return patron.test(codigo);
+}
+
+function inputLetras(event) {}
