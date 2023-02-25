@@ -1,5 +1,5 @@
 // First answer
-function first() {
+function firstF() {
   //Varaibles
   let capitalIngresado = document.getElementById("money").value;
   let tiempoIngresado = document.getElementById("time").value;
@@ -92,7 +92,30 @@ function secondV() {
 }
 
 // Third answer
-function third() {}
+function thirdF() {}
+
+function thirdIp(e) {
+  let teclado = document.all ? e.keyCode : e.which;
+  if (teclado == 8) return true;
+  let patron = /[0-9\d .]/;
+  let codigo = String.fromCharCode(teclado);
+  return patron.test(codigo);
+}
+
+function thirdIt(e) {
+  let teclado = document.all ? e.keyCode : e.which;
+  if (teclado == 8) return true;
+  let patron = /[Aa-Zz\W .]/;
+  let codigo = String.fromCharCode(teclado);
+  return patron.test(codigo);
+}
+
+function thirdV() {
+  document.getElementById("producto").value = "";
+  document.getElementById("marca").value = "";
+  document.getElementById("tipoProducto").value = "";
+  document.getElementById("precioProducto").value = "";
+}
 
 // Fourth answer
 function fourth() {}
