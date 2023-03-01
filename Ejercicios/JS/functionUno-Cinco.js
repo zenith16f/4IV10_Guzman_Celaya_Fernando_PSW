@@ -290,7 +290,7 @@ function fifthF() {
     mujeres = parseInt(mujeres);
 
     //Proceso
-    if (hombres >= 0 && mujeres >= 0) {
+    if (hombres > 0 && mujeres > 0) {
       if (hombres <= 100 && mujeres <= 100) {
         //Variables Finales
         let porcentajeHombres;
