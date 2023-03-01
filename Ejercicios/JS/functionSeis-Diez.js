@@ -180,7 +180,7 @@ function tenth() {
     alert("Ingresa datos validos");
     return false;
   } else {
-    if (antiguedad > 0 && antiguedad < 70) {
+    if (antiguedad >= 0 && antiguedad < 70) {
       if (salario > 0 && salario < 999999) {
         if (antiguedad < 1) {
           utilidad = 0.05;
