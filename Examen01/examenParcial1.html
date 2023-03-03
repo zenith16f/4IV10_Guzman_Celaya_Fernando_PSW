@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./CSS/examenstyle.css" />
+    <title>Examen Primer Parcial</title>
+  </head>
+
+  <body>
+    <div class="main-container">
+      <header>
+        <h1>Banco ZenInvertions</h1>
+        <nav>
+          <h2>
+            Tabla de interes compuesto para invertir en un terreno (Playa)
+          </h2>
+        </nav>
+      </header>
+      <form method="get" name="input">
+        <label>Bajo un prestamos de:</label>
+        <input
+          type="text"
+          id="capital"
+          placeholder="Ingresa el capital a invertir"
+          onkeypress="return inputN(event)"
+        />
+        <br />
+        <label>Con un % de: 96% anual por:</label><br />
+        <select name="años" id="years">
+          <div class="select-values">
+            <option value="1" selected>1 año</option>
+            <option value="2">2 años</option>
+            <option value="3">3 años</option>
+            <option value="4">4 años</option>
+            <option value="5">5 años</option>
+            <option value="6">6 años</option>
+            <option value="7">7 años</option>
+            <option value="8">8 años</option>
+            <option value="9">9 años</option>
+            <option value="10">10 años</option>
+            <option value="11">11 años</option>
+            <option value="12">12 años</option>
+            <option value="13">13 años</option>
+            <option value="14">14 años</option>
+            <option value="15">15 años</option>
+            <option value="16">16 años</option>
+            <option value="17">17 años</option>
+            <option value="18">18 años</option>
+            <option value="19">19 años</option>
+            <option value="20">20 años</option>
+          </div>
+        </select>
+        <br />
+        <br />
+        <input
+          type="button"
+          value="Calcular"
+          id="calcular"
+          onclick="return examenF()"
+        />
+        <input
+          type="button"
+          value="Vaciar"
+          id="vaciar"
+          onclick="return limpiar()"
+        />
+        <br />
+        <br />
+        <div class="amortization-table">
+          <table>
+            <thead>
+              <tr>
+                <th>No. Pago</th>
+                <th>Inversion</th>
+                <th>Intereses</th>
+                <th>Abono capital</th>
+                <th>Cuota</th>
+                <th>Saldo Final</th>
+              </tr>
+            </thead>
+            <tbody id="table">
+              <tr>
+                <td><pre id="noPago"></pre></td>
+                <td><pre id="prestamo"></pre></td>
+                <td><pre id="interes"></pre></td>
+                <td><pre id="pago"></pre></td>
+                <td><pre id="cuota"></pre></td>
+                <td><pre id="restante"></pre></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Total</td>
+                <td><pre id="totalIntereses"></pre></td>
+                <td><pre id="totalPago"></pre></td>
+                <td><pre id="totalCuota"></pre></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <br />
+      </form>
+    </div>
+
+    <div class="back-container">
+      <footer><a href="../index.html">Main Page</a></footer>
+    </div>
+
+    <script src="./JS/examenFunction.js"></script>
+  </body>
+</html>

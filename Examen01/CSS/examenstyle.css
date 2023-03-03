@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #1b1919;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.5;
+  margin: 1.5rem;
+  padding: 1rem 2rem 1rem;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.main-container {
+  background-color: #edebeb;
+  margin: 1rem;
+  border-radius: 1.3rem;
+  padding: 1rem 1.5rem 1rem;
+}
+
+.main-container h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 3rem;
+  font-size: 2.8rem;
+  margin: 1.2rem;
+}
+
+.main-container h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+  padding: 1rem 2rem 1rem;
+  font-size: 1.4rem;
+}
+
+.main-container form {
+  margin: 1rem;
+  padding: 1rem 2rem 1rem;
+  font-size: 1.4rem;
+  line-height: 2;
+}
+
+#capital {
+  background-color: rgb(185, 195, 195);
+  border-radius: 2rem;
+  border: none;
+
+  font-size: 1.3rem;
+  width: 45rem;
+  padding: 1rem 1.3rem 1rem;
+}
+
+.main-container select {
+  width: 20rem;
+  text-align: center;
+  font-size: 1.2rem;
+  background-color: rgb(185, 195, 195);
+  border: none;
+  border-radius: 2rem;
+  padding: 0.5rem 1.3rem 0.5rem;
+}
+
+#calcular,
+#vaciar {
+  font-size: 1.1rem;
+  padding: 0.7rem 1.5rem 0.7rem;
+  width: 9rem;
+  border: none;
+  border-radius: 2rem;
+  margin-right: 3.5rem;
+  background-color: #d3d0d0;
+  cursor: pointer;
+}
+
+#calcular:hover,
+#vaciar:hover {
+  background-color: #b3b0b0;
+  cursor: pointer;
+}
+
+.amortization-table {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.amortization-table th {
+  padding: 1rem 2rem 1rem;
+}
+
+.amortization-table thead {
+  background-color: #d3d0d0;
+  border-radius: 1.3rem;
+}
+
+.amortization-table td {
+  border: solid 0.1rem #d3d0d0;
+  padding: 1rem 2rem 1rem;
+}
+
+.back-container {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-container a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 1.5rem;
+}
