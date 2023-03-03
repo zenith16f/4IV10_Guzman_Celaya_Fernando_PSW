@@ -102,6 +102,22 @@ body {
   padding: 1rem 2rem 1rem;
 }
 
+.interes-compuesto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.interes-compuesto h2 {
+  font-size: 1.4rem;
+  padding: 1rem 1.3rem 1rem;
+}
+
+.interes-compuesto pre {
+  font-size: 1.4rem;
+  padding: 1rem 1.3rem 1rem;
+}
+
 .back-container {
   background-color: #ffffff;
   padding: 2rem;

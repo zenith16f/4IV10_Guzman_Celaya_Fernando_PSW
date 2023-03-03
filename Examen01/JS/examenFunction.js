@@ -38,6 +38,10 @@ function examenF() {
       let totalPago;
       let totalCuota = 0;
 
+      //Calculo de interes compuesto
+      let interesCompuestoI =
+        capitalIngresado * Math.pow(1 + tasaMensual, tiempoMeses);
+
       // Calculos
       if (capitalIngresado > 0 && capitalIngresado < 9999999) {
         for (let i = 0; i < tiempoMeses; i++) {
@@ -75,6 +79,8 @@ function examenF() {
           "$" + totalPago.toFixed(2);
         document.querySelector("#totalCuota").textContent =
           "$" + totalCuota.toFixed(2);
+        document.querySelector("#interesCompuesto").textContent =
+          "$" + interesCompuestoI.toFixed(2);
       } else {
         alert("Ingresa una cantidad de capital valida");
         return false;
@@ -95,6 +101,7 @@ function limpiar() {
   document.querySelector("#totalIntereses").textContent = "";
   document.querySelector("#totalPago").textContent = "";
   document.querySelector("#totalCuota").textContent = "";
+  document.querySelector("#interesCompuesto").textContent = "";
 }
 
 // Validacion de datos
