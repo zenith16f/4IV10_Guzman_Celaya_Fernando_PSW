@@ -1,6 +1,70 @@
 /* Problema 1 */
+function problemaUno() {
+  // Se define un alfabeto
+
+  // Obtener el input del usuario
+  var p1Input = document.querySelector("#p1-input").value;
+
+  // Separar todo por espacios
+  var p1Palabras = p1Input.split(" ");
+
+  //Necesitamso uan funcion que se encargue de recuperar cada palabra, se tiene que eliminar los espacios
+
+  p1Palabras = p1Palabras.map(function (palabras) {
+    return palabras.replace(/\s/g, "").toUpperCase();
+  });
+
+  //Invertir las palabras
+  var p1Respuesta = "";
+  p1Palabras.forEach(function (palabra, i) {
+    // var reverseWords = [];
+    var palabraArray = palabra.split("").reverse().join("");
+
+    //Iterar cada palabra
+    // palabra.forEach(function (palabraI, k) {
+    palabraI = palabraArray;
+    // });
+    //Vamos a contar la salida
+    p1Respuesta += "La palabra: " + palabra + " = " + palabraI + "\n";
+  });
+  //Imprimir la salida
+  document.querySelector("#p1-output").textContent = p1Respuesta;
+}
 
 /* Problema 2 */
+function problemaDos() {
+  // User x
+  let userX1 = document.querySelector("#p2-x1 ").value;
+  let userX2 = document.querySelector("#p2-x2").value;
+  let userX3 = document.querySelector("#p2-x3").value;
+  let userX4 = document.querySelector("#p2-x4").value;
+  let userX5 = document.querySelector("#p2-x5").value;
+  // User y
+  let userY1 = document.querySelector("#p2-y1").value;
+  let userY2 = document.querySelector("#p2-y2").value;
+  let userY3 = document.querySelector("#p2-y3").value;
+  let userY4 = document.querySelector("#p2-y4").value;
+  let userY5 = document.querySelector("#p2-y5").value;
+
+  // Arrays
+  let x = [];
+  let y = [];
+
+  // Adding the values to array
+  x.push(userX1, userX2, userX3, userX4, userX5);
+  y.push(userY1, userY2, userY3, userY4, userY5);
+
+  // Parsing the arrays content
+  x = x.map((x) => parseInt(x));
+  y = y.map((y) => parseInt(y));
+
+  // Arrow Function to scalar operation
+  const scalarProduct = (a, b) =>
+    a.map((x, i) => a[i] * b[i]).reduce((m, n) => m + n);
+
+  // Printing the result
+  document.querySelector("#p2-output").textContent = scalarProduct(x, y);
+}
 
 /* Problema 3 */
 function problema3() {
