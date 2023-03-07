@@ -1,34 +1,14 @@
-/* Problema 1 */
+// Problema 1
 function problemaUno() {
-  // Se define un alfabeto
+  var p1_input = document.querySelector("#p1-input").value;
+  var p1_array = p1_input.split(" ").reverse();
+  var p1_res = "";
 
-  // Obtener el input del usuario
-  var p1Input = document.querySelector("#p1-input").value;
-
-  // Separar todo por espacios
-  var p1Palabras = p1Input.split(" ");
-
-  //Necesitamso uan funcion que se encargue de recuperar cada palabra, se tiene que eliminar los espacios
-
-  p1Palabras = p1Palabras.map(function (palabras) {
-    return palabras.replace(/\s/g, "").toUpperCase();
+  p1_array.forEach(function (palabra, i) {
+    if (i != 0 || i != p1_array.length) p1_res += " ";
+    p1_res += palabra;
   });
-
-  //Invertir las palabras
-  var p1Respuesta = "";
-  p1Palabras.forEach(function (palabra, i) {
-    // var reverseWords = [];
-    var palabraArray = palabra.split("").reverse().join("");
-
-    //Iterar cada palabra
-    // palabra.forEach(function (palabraI, k) {
-    palabraI = palabraArray;
-    // });
-    //Vamos a contar la salida
-    p1Respuesta += "La palabra: " + palabra + " = " + palabraI + "\n";
-  });
-  //Imprimir la salida
-  document.querySelector("#p1-output").textContent = p1Respuesta;
+  document.querySelector("#p1-output").textContent = p1_res;
 }
 
 /* Problema 2 */
