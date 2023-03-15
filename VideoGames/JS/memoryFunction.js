@@ -23,7 +23,7 @@ const colors = [
   "SandyBrown",
   "OrangeRed",
   "Lavender",
-  "Teal",
+  "#48284A",
 ];
 const colorsPicklist = [...colors, ...colors];
 const tileCuantity = colorsPicklist.length;
