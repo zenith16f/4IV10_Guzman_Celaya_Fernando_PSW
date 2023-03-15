@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href=".//CSS/styleTwo.css" />
+
+    <title>Time Memory</title>
+  </head>
+
+  <body>
+    <!-- Menu -->
+    <div class="menu">
+      <header>
+        <nav>
+          <button class="select-page">
+            <a href="./gameSelect.html">Select Page</a>
+          </button>
+        </nav>
+      </header>
+    </div>
+
+    <!-- Rules -->
+    <div class="game-rules">
+      <h2>Reglas del Memory Time</h2>
+      <p>
+        El objetivo del juego es encontrar todas las parejas de cartas en el
+        menor tiempo posible con el fin de mejorar la capidad de memoria a corto
+        plazo y la concentración.
+        <br />
+        &nbsp 1. Coloca en el temporizador el tiempo que quieres jugar.
+        <br />
+        &nbsp 2. Completa el memory/memorama antes de que se acabe el tiempo.
+        <br />
+        &nbsp 3. Al final del juego, deten el temporizador y anota tus tiempo
+        para emepzar de nuevo o salir.
+        <br />
+        Si fallas una pareja de cartas, el temporizador tienes un segundo para
+        recordar la posición de las cartas, y no podras dar click en ninguna
+        durante ese segundo.
+        <br />
+        Si deseas jugar sin temporizador, puede solo empezar el juego.
+        <br />
+        No es necesario que anotes los tiempos de cada partida, puedes anotar
+        solo el mejor tiempo.
+      </p>
+    </div>
+
+    <!-- Timer -->
+    <div class="timer"></div>
+
+    <!-- Memory -->
+    <div class="tiles"></div>
+
+    <script src="./JS/memoryFunction.js" defer type="module"></script>
+  </body>
+</html>

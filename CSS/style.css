@@ -1,37 +1,174 @@
+:root {
+  --color-primary: #ffd97d;
+  --color-text: #edf5e0;
+  --color-back: #0e0a18;
+  --color-balck-1: #212b38;
+}
+
+/* General Style */
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-  margin: 40px;
-  background-color: #c6c8ca;
-  color: #12100e;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: "Robot", "Segoe UI", sans-serif;
+  font-weight: 200;
 }
 
-.container {
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  line-height: 1.2;
-}
+/* Menu style */
 
-.container h2 {
+.logo {
+  color: var(--color-text);
   font-size: 30px;
-  color: #240b36;
 }
 
-.container p {
-  font-size: 15px;
+.logo span {
+  position: relative;
+  color: var(--color-primary);
 }
 
-.container h3 {
-  font-size: 18px;
-  color: #240b36;
+.menu__bar {
+  background-color: var(--color-back);
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  position: relative;
 }
 
-a,
-a:visited {
-  color: #240b36;
-  line-height: 1.7;
-  font-size: 17px;
+.menu__bar ul {
+  list-style: none;
+  display: flex;
+}
+
+.menu__bar ul li {
+  padding: 10px 50px;
+  position: relative;
+}
+
+.menu__bar ul li a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: 20px;
+  transition: all 0.3s;
+}
+
+.menu__bar ul li a:hover {
+  color: var(--color-primary);
+}
+
+/* Pages dropdown style */
+.pages__menu {
+  display: none;
+}
+
+.menu__bar ul li:nth-child(3):hover .pages__menu {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 90%;
+  background-color: var(--color-back);
+}
+
+.pages__menu ul {
+  display: block;
+  margin: 10px;
+}
+
+.pages__menu ul li {
+  width: 160px;
+  padding: 10px;
+}
+
+/* Gallery dropdown style */
+.gallery__menu {
+  display: none;
+}
+
+.menu__bar ul li:nth-child(4):hover .gallery__menu {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 90%;
+  background-color: var(--color-back);
+}
+
+.gallery__menu ul {
+  display: block;
+  margin: 10px;
+}
+
+.gallery__menu ul li {
+  width: 160px;
+  padding: 10px;
+}
+
+/* Specific Dropdowns */
+
+/* Exercises drop */
+.ejercicios-drop {
+  display: none;
+}
+
+.pages__menu ul li:nth-child(6):hover .ejercicios-drop {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 160px;
+  background-color: var(--color-back);
+}
+
+/* VideoGames drop */
+.videogames-drop {
+  display: none;
+}
+.pages__menu ul li:nth-child(10):hover .videogames-drop {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 160px;
+  background-color: var(--color-back);
+}
+
+/* Icon style */
+.fas {
+  float: right;
+  margin-left: 10px;
+  padding-top: 3px;
+}
+
+/* Main view Style */
+
+.home {
+  height: calc(100vh - 80px);
+  background-image: url("../Wallpapers/StreetOne.jpg");
+  background-repeat: no-repeat;
+  background-size: 1700px;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.home h2 {
+  color: rgb(255, 255, 255);
+  font-size: 50px;
+  font-weight: 500;
+}
+
+.home p {
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  font-weight: 300;
+}
+
+.home h5 {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 300;
 }
