@@ -1,7 +1,7 @@
 <%--
-    Document   : RegistroNuevo
-    Created on : 27 mar 2023, 19:33:36
-    Author     : fer_1
+    Document   : actualizaralumno
+    Created on : 28 mar 2023, 20:46:30
+    Author     : alumno
 --%>
 
 <%@page import="java.sql.SQLException"%>
@@ -9,18 +9,16 @@
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
-<%@page contentType="text/html" language="java"
-        import="java.io.*" pageEncoding="UTF-8"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Pagina de Registro</title>
+        <title>JSP Page</title>
     </head>
     <body>
-        <h1>Bienvenido</h1>
         <%
-            // Aqui se encuentra el codigo java
+            //aqui ya es codigo java
             Connection con = null;
             Statement set = null;
             ResultSet rs = null;
@@ -43,23 +41,24 @@
                 //ahora vamos a obtener los parametros para poder insertar en la bd
                 try {
                     String nom, appat, apmat, tel, edad;
+                    int bol;
+                    bol = Integer.parseInt(request.getParameter("bol2"));
+                    nom = request.getParameter("nom2");
+                    appat = request.getParameter("appat2");
+                    apmat = request.getParameter("apmat2");
+                    tel = request.getParameter("tel2");
+                    edad = request.getParameter("edad2");
 
-                    nom = request.getParameter("nom");
-                    appat = request.getParameter("appat");
-                    apmat = request.getParameter("apmat");
-                    tel = request.getParameter("telefono");
-                    edad = request.getParameter("edad");
-
-                    String q = "insert into "
-                            + "alumnos(nom, appat, apmat,tel, edad)"
-                            + "values ('" + nom + "','" + appat + "','" + apmat + "', '" + tel + "', '" + edad + "')";
+                    String q = "update alumnos set nom = '" + nom + "', appat = '" + appat + "',"
+                            + "apmat = '" + apmat + "', tel = '" + tel + "', edad = '" + edad + "' "
+                            + "where boleta = " + bol;
 
                     set = con.createStatement();
                     int registro = set.executeUpdate(q);
                     System.out.println("Registro con exito");
         %>
 
-        <h1>Registro Exitoso</h1>
+        <h1>Actualizacion Exitosa</h1>
 
         <%
         } catch (SQLException ex) {
@@ -69,7 +68,7 @@
 
         %>
 
-        <h1>No puego registrar en tabla</h1>
+        <h1>No puedo actualizar en tabla</h1>
 
         <%    }
         } catch (Exception e) {

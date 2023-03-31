@@ -1,7 +1,7 @@
 <%--
-    Document   : RegistroNuevo
-    Created on : 27 mar 2023, 19:33:36
-    Author     : fer_1
+    Document   : borrarAlumno
+    Created on : 28 mar 2023, 20:31:35
+    Author     : alumno
 --%>
 
 <%@page import="java.sql.SQLException"%>
@@ -9,18 +9,17 @@
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
-<%@page contentType="text/html" language="java"
-        import="java.io.*" pageEncoding="UTF-8"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Pagina de Registro</title>
+        <title>JSP Page</title>
     </head>
     <body>
-        <h1>Bienvenido</h1>
+
         <%
-            // Aqui se encuentra el codigo java
+            //aqui ya es codigo java
             Connection con = null;
             Statement set = null;
             ResultSet rs = null;
@@ -42,24 +41,18 @@
 
                 //ahora vamos a obtener los parametros para poder insertar en la bd
                 try {
-                    String nom, appat, apmat, tel, edad;
+                    int id;
 
-                    nom = request.getParameter("nom");
-                    appat = request.getParameter("appat");
-                    apmat = request.getParameter("apmat");
-                    tel = request.getParameter("telefono");
-                    edad = request.getParameter("edad");
+                    id = Integer.parseInt(request.getParameter("id"));
 
-                    String q = "insert into "
-                            + "alumnos(nom, appat, apmat,tel, edad)"
-                            + "values ('" + nom + "','" + appat + "','" + apmat + "', '" + tel + "', '" + edad + "')";
+                    String q = "delete from alumnos where boleta = " + id;
 
                     set = con.createStatement();
                     int registro = set.executeUpdate(q);
-                    System.out.println("Registro con exito");
+                    System.out.println("Eliminado con exito");
         %>
 
-        <h1>Registro Exitoso</h1>
+        <h1>Alumno Eliminado paso a mejor vida</h1>
 
         <%
         } catch (SQLException ex) {
@@ -69,7 +62,7 @@
 
         %>
 
-        <h1>No puego registrar en tabla</h1>
+        <h1>No puego eliminar al alumno</h1>
 
         <%    }
         } catch (Exception e) {
@@ -84,5 +77,7 @@
         %>
 
         <a href="index.html">Regresar a la Pagina Principal</a>
+
+
     </body>
 </html>
