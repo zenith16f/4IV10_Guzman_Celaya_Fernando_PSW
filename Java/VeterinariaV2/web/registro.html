@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="./CSS/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+        <link rel="icon" href="./IMG/logotype.png">
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./CSS/registros.css" />
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+            integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <title>Registro de Usuario</title>
+    </head>
+
+    <body>
+        <div class="menu__bar">
+            <ul>
+                <img src="./IMG/logotype.png" alt="logotype">
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="#">Iniciar sesion</a></li>
+                <li><a href="cuentaUsuario.jsp">Cuenta</a></li>
+                <li><a href="./registro.html">Registrarse</a></li>
+                <li><a href="registroMascota.jsp">Registro de mascota</a></li>
+                <li><a href="#">Agendar cita</a></li>
+            </ul>
+        </div>
+        <div class="container">
+            <br />
+            <div class="registroUsuario">
+                <h2>Registro de Usuario / Dueño</h2>
+                <form method="post" name="registroUsuario" action="guardarUsuario">
+                    <div class="nombre">
+                        <div class="name">
+                            <label>Nombre del Dueño</label>
+                            <br />
+                            <input
+                                class="llenar"
+                                type="text"
+                                name="nom"
+                                id="nom"
+                                onkeypress="return inputLetras()"
+                                />
+                            <br />
+                        </div>
+                        <div class="appat">
+                            <label>Apellido paterno del Dueño</label>
+                            <br />
+                            <input
+                                class="llenar"
+                                type="text"
+                                name="appat"
+                                id="appat"
+                                onkeypress="return inputLetras()"
+                                />
+                            <br />
+                        </div>
+                        <div class="apmat">
+                            <label>Apellido materno del Dueño</label>
+                            <br />
+                            <input
+                                class="llenar"
+                                type="text"
+                                name="apmat"
+                                id="apmat"
+                                onkeypress="return inputLetras()"
+                                />
+                            <br />
+                        </div>
+                    </div>
+                    <div class="importante">
+                        <div class="correo">
+                            <label>Correo</label>
+                            <br />
+                            <input class="llenar" type="email" name="correo" id="correo" />
+                            <br />
+                        </div>
+                        <div class="contrasena">
+                            <label>Contraseña</label>
+                            <br />
+                            <input class="llenar" type="password" name="password" id="password" />
+                            <br />
+                        </div>
+                    </div>
+                    <label>Direccion</label>
+                    <br />
+                    <input class="llenar" type="text" name="dir" id="dir" />
+                    <br />
+                    <div class="botones">
+                        <input
+                            type="submit"
+                            value="Registrar datos del dueño"
+                            id="submitUser"
+                            />
+                        <input type="reset" value="Borrar datos del dueño" />
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script src="./JS/dueñoValidacion.js"></script>
+    </body>
+</html>

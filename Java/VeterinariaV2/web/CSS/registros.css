@@ -1,0 +1,100 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/*
+    Created on : 20 abr 2023, 15:21:00
+    Author     : Zenith
+*/
+
+/* General Style */
+body {
+    margin: 0;
+    border: 0;
+    background-color: #f5f5f5;
+    font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.42857143;
+    color: #333;
+}
+
+/* Menu style */
+h2{
+    font-size: 2em;
+    color: rgb(49, 49, 156);
+}
+
+/* Main page style */
+.registroUsuario,.container{
+    padding: 20px;
+}
+
+form{
+    width: 55%;
+    min-width: 918px;
+}
+
+.registroUsuario div{
+    margin-bottom: 10px;
+}
+
+.nombre, .importante{
+    display: flex;
+}
+
+.botones{
+    text-align: center;
+}
+
+.nombre > *{
+    margin-right: auto;
+}
+
+.importante > *{
+    margin-right: auto;
+    width: 45.6%;
+}
+
+input{
+    margin-top: 5px;
+    width: 100%;
+    font-size: 1.5em;
+}
+
+.llenar{
+    padding-left: 3px;
+    border: #0000004d 1px solid;
+}
+
+.llenar:focus{
+    outline: none;
+    box-shadow: 0 0 23px 1px rgb(49, 49, 156);
+}
+
+input[type="submit"],[type="reset"]{
+    margin-top: 35px;
+    font-size: 1.2em;
+    width: auto;
+    background-color: #18A0FB;
+    height: 35px;
+    border: none;
+    border-radius: 10px;
+}
+
+input[type="submit"]:active,[type="reset"]:active{
+    box-shadow: inset #2567f5b6 0 0 10px 5px;
+    position: relative;
+    bottom: 2px;
+}
+
+input[type="submit"]:focus,[type="reset"]:focus{
+    outline: none;
+    box-shadow: inset #2567f5b6 0 0 10px 5px;
+}
+
+input[name="dir"]{
+    width: 95.6%;
+}
+
+label{
+    font-size: 1.3em;
+}
